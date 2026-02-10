@@ -1,7 +1,7 @@
-tensorflow-cpu
-huggingface_hub
 flask
 gunicorn
+tensorflow
 numpy
 pillow
-opencv-python 
+opencv-python-headless
+huggingface-hub

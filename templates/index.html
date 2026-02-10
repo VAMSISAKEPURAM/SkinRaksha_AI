@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinRaksha AI | Professional Skin Health Analysis</title>
+    <meta name="description" content="Advanced AI-powered skin disease detection and health assessment platform.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-dna"></i>
+                <span>SkinRaksha AI</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#impact" class="nav-link">Impact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#tool-section" class="btn btn-primary">Start Scan</a>
+            </div>
+
+            <div class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg-blob"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="step-badge" style="margin-bottom: 1rem; background: white;">
+                    <i class="fa-solid fa-check-circle text-primary"></i> FDA Guided Protocols
+                </div>
+                <h1>AI-Powered Skin Health Intelligence</h1>
+                <p>Clinical-grade early risk assessment powered by advanced computer vision. Get instant analysis and
+                    actionable medical insights in seconds.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#tool-section" class="btn btn-primary">Analyze My Skin</a>
+                    <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                <div class="hero-badges">
+                    <div><i class="fa-solid fa-shield-halved"></i> 256-Bit Encrypted</div>
+                    <div><i class="fa-solid fa-user-doctor"></i> Dermatologist Verified</div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-img-container">
+                    <!-- Using generated image -->
+                    <img src="{{ url_for('static', filename='img/hero-bg.png') }}" alt="Advanced Skin Analysis">
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="float-card top-left">
+                    <div class="float-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div>
+                        <strong>98.5% Accuracy</strong>
+                        <div style="font-size: 0.8rem; color: #666">In clinical validation</div>
+                    </div>
+                </div>
+
+                <div class="float-card bottom-right">
+                    <div class="float-icon"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <strong>AI Processing</strong>
+                        <div style="font-size: 0.8rem; color: #666">Real-time analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="section-padding features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Clinical Capabilities</h2>
+                <p>Built with state-of-the-art deep learning models to identify a wide range of dermatological
+                    conditions.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Early Detection</h3>
+                    <p>Identifies subtle patterns and irregularities that may indicate early-stage skin conditions
+                        before they become visible to the naked eye.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3>Multi-Condition Support</h3>
+                    <p>Trained on over 50,000 clinical images to detect Acne, Eczema, Melanoma, Psoriasis, and more with
+                        high precision.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                    <h3>Actionable Reports</h3>
+                    <p>Does not just diagnosis—provides detailed severity assessment, immediate care steps, and
+                        recommended treatment protocols.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h3>Privacy First</h3>
+                    <p>Your biometric data is processed securely. Images are analyzed in an encrypted environment and
+                        are not stored permanently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-padding" id="how-it-works" style="background: #eef2ff;">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="hero-img-container" style="border: none; box-shadow: none; background: transparent;">
+                        <img src="{{ url_for('static', filename='img/doctor-demo.png') }}" alt="Doctor showing analysis"
+                            style="border-radius: 1rem; box-shadow: var(--shadow-xl);">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h2>How It Works</h2>
+                    <p style="margin-bottom: 2rem;">A simple, three-step process to get professional insights about your
+                        skin health.</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div class="feature-icon"
+                                style="min-width: 60px; background: var(--primary-main); color: white;">1</div>
+                            <div>
+                                <h4>Capture or Upload</h4>
+                                <p style="font-size: 0.95rem; color: #666;">Take a clear photo of the affected area
+                                    using your camera or upload an existing high-quality image.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div class="feature-icon"
+                                style="min-width: 60px; background: var(--primary-main); color: white;">2</div>
+                            <div>
+                                <h4>AI Comparisons</h4>
+                                <p style="font-size: 0.95rem; color: #666;">Our neural network compares your image
+                                    against a vast database of clinical cases to find feature matches.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem;">
+                            <div class="feature-icon"
+                                style="min-width: 60px; background: var(--primary-main); color: white;">3</div>
+                            <div>
+                                <h4>Get Your Report</h4>
+                                <p style="font-size: 0.95rem; color: #666;">Receive a comprehensive 5-point medical
+                                    report detailing condition, severity, and treatment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TOOL SECTION -->
+    <section class="app-section section-padding" id="tool-section">
+        <div class="container scanner-container">
+            <div class="section-header">
+                <h2>AI Skin Scanner</h2>
+                <div class="step-badge">Secure Analysis Mode</div>
+            </div>
+
+            <div class="glass-card upload-card" id="upload-card">
+                <!-- Drop Zone -->
+                <div class="upload-area" id="drop-zone">
+                    <div class="upload-icon-wrapper">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Upload Skin Image</h3>
+                    <p style="color: #64748b; margin-bottom: 2rem;">Drag & drop your file here or browse</p>
+
+                    <div class="upload-actions">
+                        <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">
+                            <i class="fa-regular fa-folder-open"></i> Select File
+                        </button>
+                        <button class="btn btn-secondary" onclick="document.getElementById('camera-input').click()">
+                            <i class="fa-solid fa-camera"></i> Camera
+                        </button>
+                    </div>
+
+                    <!-- Hidden Inputs (Preserved Logic) -->
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                    <input type="file" id="camera-input" accept="image/*" capture="environment" hidden>
+
+                    <span class="file-types">Supported: JPG, PNG • Max: 10MB</span>
+                </div>
+
+                <!-- Preview Area (Initially Hidden) -->
+                <div class="preview-area hidden" id="preview-area">
+
+                    <div class="image-preview-wrapper">
+                        <img id="image-preview" src="" alt="Skin Preview">
+                        <button class="remove-image" id="remove-image" title="Remove">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- File Name Display (Required by JS) -->
+                    <p id="file-name" style="margin: 1rem 0; font-size: 0.9rem; color: #64748b;">
+                        Selected file
+                    </p>
+
+                    <!-- ANALYZE BUTTON (FIXED) -->
+                    <button class="btn btn-primary" id="analyze-btn" style="min-width: 220px;">
+                        <i class="fa-solid fa-microscope"></i> Analyze Image
+                    </button>
+
+                </div>
+
+
+                <!-- Loading State (Initially Hidden) -->
+                <div class="loading-state hidden" id="loading-state">
+                    <div class="spinner"></div>
+                    <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Analyzing Cellular Patterns...</h4>
+                    <p style="color: #64748b;">Please wait while our AI processes the image.</p>
+                </div>
+            </div>
+
+            <!-- Results Section (Injects here) -->
+            <div class="results-section hidden" id="results-section">
+                <!-- Javascript will inject slides here -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section-padding impact-section" id="impact">
+        <div class="container">
+            <div class="glass-card" style="background: var(--primary-main); color: white; border: none;">
+                <div class="hero-content" style="gap: 2rem; padding: 2rem;">
+                    <div>
+                        <h2 style="color: white; margin-bottom: 1rem;">Why This Matters</h2>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Skin cancer is the most common
+                            cancer in the United States. Early detection leads to a 99% survival rate for melanoma. Our
+                            goal is to make screening accessible to everyone, everywhere.</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div class="text-center">
+                            <div style="font-size: 3rem; font-weight: 800;">50+</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">Conditions Supported</div>
+                        </div>
+                        <div class="text-center">
+                            <div style="font-size: 3rem; font-weight: 800;">24/7</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">Instant Access</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: white;">
+                        <i class="fa-solid fa-dna" style="color: var(--primary-light);"></i> SkinRaksha AI
+                    </h4>
+                    <p style="color: var(--neutral-400); font-size: 0.9rem;">Advanced dermatology intelligence for the
+                        modern world. Empowering you with knowledge about your skin health.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#tool-section">Scanner</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Medical Disclaimer</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p style="color: var(--neutral-400); margin-bottom: 1rem;">support@skinraksha.ai</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer Section -->
+            <div class="disclaimer-section" style="margin: 2rem auto; text-align: center;">
+                <p style="color: #64748b; font-size: 0.8rem; line-height: 1.5;">
+                    <i class="fa-solid fa-triangle-exclamation"></i> <strong>MEDICAL DISCLAIMER:</strong>
+                    This application is designed for educational and preliminary screening purposes only. It does not
+                    provide a medical diagnosis and is not a substitute for professional medical advice, diagnosis, or
+                    treatment. Always seek the advice of your physician or other qualified health provider with any
+                    questions you may have regarding a medical condition.
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 SkinRaksha AI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/script-base.js') }}?v=2"></script>
+</body>
+
+</html>

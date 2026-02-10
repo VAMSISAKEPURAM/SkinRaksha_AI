@@ -6,13 +6,23 @@ import numpy as np
 from PIL import Image
 from skin_diseases import skin_diseases
 import io
+from huggingface_hub import hf_hub_download
+from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
 # Load Model
-MODEL_PATH = 'model/Skin_Diseases_Classifier_EfficientNetB4_best.keras'
-print(f"Loading model from {MODEL_PATH}...")
+print("Downloading model from Hugging Face...")
+
+MODEL_PATH = hf_hub_download(
+    repo_id="Vamsi232/skin-disease-efficientnet-b4",
+    filename="Skin_Diseases_Classifier_EfficientNetB4_best.keras"
+)
+
+print(f"Model downloaded to: {MODEL_PATH}")
+
 model = load_model(MODEL_PATH)
+
 print("Model loaded successfully.")
 
 CLASS_NAMES = [
@@ -77,3 +87,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+

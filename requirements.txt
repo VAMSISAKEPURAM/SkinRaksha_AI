@@ -1,5 +1,7 @@
+tensorflow-cpu
+huggingface_hub
 flask
-tensorflow
-pillow
+gunicorn
 numpy
-streamlit
+pillow
+opencv-python

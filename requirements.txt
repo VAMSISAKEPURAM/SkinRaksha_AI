@@ -1,7 +1,6 @@
-tensorflow-cpu
-huggingface_hub
 flask
 gunicorn
 numpy
 pillow
-opencv-python
+huggingface_hub
+onnxruntime   # lightweight ML runtime, much smaller than tensorflow-cpu

@@ -25,12 +25,10 @@ model = load_model(MODEL_PATH)
 
 print("Model loaded successfully.")
 
-CLASS_NAMES = [
- 'Acne', 'Actinic Keratosis', 'Basal Cell Carcinoma', 'Chickenpox', 
- 'Dermato Fibroma', 'Dyshidrotic Eczema', 'Melanoma', 'Nail Fungus', 
- 'Nevus', 'Normal Skin', 'Pigmented Benign Keratosis', 'Ringworm', 
- 'Seborrheic Keratosis', 'Squamous Cell Carcinoma', 'Vascular Lesion'
-]
+CLASS_NAMES = ['Acne', 'Actinic Keratosis', 'Basal Cell Carcinoma', 'Chickenpox',
+               'Dermato Fibroma', 'Melanoma', 'Nail Fungus', 'Nevus', 'Normal Skin',
+               'Pigmented Benign Keratosis', 'Ringworm', 'Seborrheic Keratosis',
+               'Squamous Cell Carcinoma', 'Vascular Lesion']
 
 @app.route('/')
 def home():
@@ -87,6 +85,7 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
 
 

@@ -15,7 +15,7 @@ app = Flask(__name__)
 print("Downloading model from Hugging Face...")
 
 MODEL_PATH = hf_hub_download(
-    repo_id="Vamsi232/skin-disease-efficientnet-b4",
+    repo_id="Vamsi232/Skin_Diseases_Classifier_EfficientNetB4_best",
     filename="Skin_Diseases_Classifier_EfficientNetB4_best.keras"
 )
 
@@ -85,6 +85,7 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
 
 
